@@ -80,7 +80,7 @@ In some situations, some other commands are needed. They are described by the
   current mission and go to the next one. Running this command will first ask
   for a password (except in debug mode) to avoid students overusing it. (Just
   like most other `gsh` commands, the use of this command is logged.)
-  Note however that skiping a mission that has already been completed doesn't
+  Note however that skipping a mission that has already been completed doesn't
   require a password.
 
 * `gsh goto N`: when the previous command isn't sufficient, `gsh goto N`
