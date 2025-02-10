@@ -1,0 +1,33 @@
+Mission goal
+============
+
+The tower is very high and offers a magnificent view of the castle's surroundings.
+You look at the landscape in all directions.
+
+To complete this mission, the last 4 commands you used must display the contents 
+of the files representing the four directions.
+
+Useful commands
+===============
+
+cat FILE
+  Display the contents of the file in the terminal.
+
+ls
+  Show a list of locations and files that are currently accessible.
+  Remark: ``ls`` is an abbreviation of "list".
+
+gsh check
+  Check if the mission objective has been achieved.
+
+gsh reset
+  Restart the mission from the beginning.
+
+
+Remarks
+-------
+
+UPPERCASE words appearing in commands are meta-variables: you need 
+to replace them by appropriate (string) values.
+
+Files with extension '.txt' usually contain regular text that uses characters from the latin alphabet.
