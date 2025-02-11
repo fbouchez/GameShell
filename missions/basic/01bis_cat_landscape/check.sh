@@ -11,17 +11,18 @@
 # It typically looks like
 
 _mission_check() {
-  # ppc=$(. fc-lnr.sh | sed -n '1,5p;5q')
-  ppc=$(. fc-lnr.sh 4)
-
-  echo "ppc is $ppc"
+  ppc=$(. fc-lnr.sh | sed -n '1,4p;5q')
+  # ppc=$(. fc-lnr.sh 4)
 
   view=""
   while read -r pc; do
     if [ "$pc" =~ "cat*" ]; then
+      # echo "cat command is: $pc"
       view="$view\n$(eval $pc)"
       # echo '###############'
       # echo "$view"
+    else
+      echo "NOT USING command: $pc"
     fi
   done <<< "$ppc"
 
@@ -41,9 +42,14 @@ _mission_check() {
   # echo "XXXX${view}XXXX"
 
   if [ "$view" == "$view_ref" ]; then
+    echo "Magnificent!"
     return 0
   else
     echo "$(gettext "The last four commands do not show all directions.")"
+    # echo "view is"
+    # echo "$view"
+    # echo "ref view is"
+    # echo "$view_ref"
     return 1
   fi
 }
