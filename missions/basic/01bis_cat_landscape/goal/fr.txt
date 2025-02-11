@@ -1,0 +1,34 @@
+Objectif
+========
+
+La tour est très haute et offre une vue magnifique sur les alentours du château.
+Vous admirez le paysage dans toutes les directions.
+
+Pour valider cette mission, les quatre dernières commandes doivent montrer le contenu
+des fichiers représentant les quatre directions.
+
+Commandes utiles
+================
+
+cat FICHIER
+  Affiche le contenu du fichier dans le terminal.
+
+ls
+  Liste les lieux accessibles depuis la position actuelle.
+  Note : ``ls`` est une abréviation pour "liste".
+
+gsh check
+  Vérifie si l'objectif de la mission a été atteint.
+
+gsh reset
+  Ré-initialise la mission au début.
+
+
+Remarque
+--------
+
+Les termes apparaissant en MAJUSCULES dans les commandes sont des 
+méta-variables : vous devez les remplacer par des valeurs (chaines 
+de caractères) appropriées.
+
+Les fichiers dont l'extension est '.txt' contiennent en général du texte brut formé de caractères de l'alphabet dit « latin ».
