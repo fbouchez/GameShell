@@ -17,12 +17,16 @@ _mission_check() {
   view=""
   while read -r pc; do
     if [ "$pc" =~ "cat*" ]; then
-      # echo "cat command is: $pc"
       view="$view\n$(eval $pc)"
-      # echo '###############'
-      # echo "$view"
+      if [ "$GSH_MODE" = DEBUG ] ; then
+        echo "Using cat command: $pc"
+        # echo '###############'
+        # echo "$view"
+      fi
     else
-      echo "NOT USING command: $pc"
+      if [ "$GSH_MODE" = DEBUG ] ; then
+        echo "NOT USING command: $pc"
+      fi
     fi
   done <<< "$ppc"
 
@@ -42,7 +46,7 @@ _mission_check() {
   # echo "XXXX${view}XXXX"
 
   if [ "$view" == "$view_ref" ]; then
-    echo "Magnificent!"
+    echo $(gettext "What a magnificent view!")
     return 0
   else
     echo "$(gettext "The last four commands do not show all directions.")"

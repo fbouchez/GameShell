@@ -6,5 +6,6 @@ add_cmd "cat \"$(gettext 'west').txt\""
 add_cmd "cat \"$(gettext 'south').txt\""
 add_cmd "cat \"$(gettext 'north').txt\""
 add_cmd "cat \"$(gettext 'east').txt\""
-
 gsh check
+
+. alt_history_stop.sh
